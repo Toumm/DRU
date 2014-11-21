@@ -88,6 +88,7 @@ div.dare div.thedare{
 	color: #ca5959;
 	font-size: 15px;
 	float:left;
+	clear:both;
 	cursor: pointer;
 }
 .green{
