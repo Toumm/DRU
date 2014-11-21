@@ -11,6 +11,7 @@ function onLoad() {
 
 //ON DEVICE READY
 function onDeviceReady() {
+	alert("deviceReady");
     pushNotification = window.plugins.pushNotification;
     registering();
 }
@@ -95,7 +96,7 @@ function swiperightHandler( event ){
 
 //NOTIFICATION PLUGIN REGISTER
 function registering(){
-alert("registering fired");
+	alert("registering fired");
 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
 	    pushNotification.register(
 	    successHandler,
