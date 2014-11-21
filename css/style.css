@@ -47,6 +47,7 @@ div.dare{
 	padding: 10px;
 	float:left;
 	width:100%;
+	position:absolute;
 }
 div.dare.accepted{background: rgb(118,229,103); /* Old browsers */
 background: -moz-linear-gradient(left,  rgba(118,229,103,1) 0%, rgba(255,255,255,1) 55%); /* FF3.6+ */
@@ -143,8 +144,8 @@ pre
 }
 div.dealHover{
 	background-color: rgba(0, 0, 0, 0.7);
-	width:80%;
-	height:50px;
+	max-height: 300px;
+	max-width: 300px;
 	position:absolute;
 	z-index: 1000;
 	display:none;

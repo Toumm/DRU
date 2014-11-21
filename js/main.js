@@ -5,6 +5,17 @@ function onLoad() {
 	$( "body" ).on( "swiperight", function(){
 		$("#menu").trigger("open.mm");
 	});
+	$("div.dare").on('touchmove', function( e ){
+    	console.log(e.originalEvent.clientX);
+    	elem = $(e.target);
+	    if(!elem.hasClass("dare")){
+	    	elem = elem.parent("div.dare");
+		}
+		elem = elem.css("left", -e.originalEvent.clientX);
+	});
+	$("div.dare").on('touchend', function( e ){
+		elem = elem.css("left", 10);
+	});
 }
 
 function onDeviceReady() {
@@ -26,8 +37,8 @@ function swipeleftHandler( event ){
 	    hover.height(w.width()*0.8);
 	    var h = hover.height();
 	    hover.css("top", w.height()/4);
-	    hover.css("left", w.width()*0.1);
-	    hover.html('<img src="img/Check.png" height="'+h*0.5+'px" width="'+h*0.5+'px" style="margin: 40px;" /><div class="green" style="font-size:'+w.width()*0.1+'px;">DEAL!</div>');
+	    hover.css("left", (w.width()-h)/2);
+	    hover.html('<img src="img/Check.png" height="'+h*0.5+'px" width="'+h*0.5+'px" style="margin: 40px;" /><div class="green" style="font-size:'+h*0.2+'px;">DEAL!</div>');
 	    hover.fadeIn();
 	    setTimeout(function(){ hover.fadeOut(); }, 2500);
 	    elem.addClass("accepted");
@@ -50,8 +61,8 @@ function swiperightHandler( event ){
 	    hover.height(w.width()*0.8);
 	    var h = hover.height();
 	    hover.css("top", w.height()/4);
-	    hover.css("left", w.width()*0.1);
-	    hover.html('<img src="img/noway.png" height="'+h*0.4+'px" width="'+h*0.4+'px" style="margin: 40px;" /><div class="red" style="font-size:'+w.width()*0.1+'px;">NO WAY!</div>');
+	    hover.css("left", (w.width()-h)/2);
+	    hover.html('<img src="img/noway.png" height="'+h*0.4+'px" width="'+h*0.4+'px" style="margin: 40px;" /><div class="red" style="font-size:'+h*0.2+'px;">NO WAY!</div>');
 	    hover.fadeIn();
 	    elem.addClass("refused");
 	    setTimeout(function(){ hover.fadeOut(); }, 2500);
