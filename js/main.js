@@ -5,17 +5,6 @@ function onLoad() {
 	$( "body" ).on( "swiperight", function(){
 		$("#menu").trigger("open.mm");
 	});
-	$("div.dare").on('touchmove', function( e ){
-    	console.log(e.originalEvent.clientX);
-    	elem = $(e.target);
-	    if(!elem.hasClass("dare")){
-	    	elem = elem.parent("div.dare");
-		}
-		elem = elem.css("left", -e.originalEvent.clientX);
-	});
-	$("div.dare").on('touchend', function( e ){
-		elem = elem.css("left", 10);
-	});
 }
 
 function onDeviceReady() {
@@ -23,10 +12,20 @@ function onDeviceReady() {
 }
     
 function swipeleftHandler( event ){
-    elem = $(event.target);
+    var elem = $(event.target);
     if(!elem.hasClass("dare")){
 	    elem = elem.parent("div.dare");
 	}
+    var pos = elem.position();
+    elem.css("position", "absolute").animate({
+	    left: -50,
+	    top:  pos.top,
+	});
+	setTimeout(function(){
+    elem.css("position", "").animate({
+	    left: 10,
+	    top:  pos.top,
+	});}, 200);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
     }
@@ -51,6 +50,21 @@ function swiperightHandler( event ){
      if(!elem.hasClass("dare")){
 	    elem = elem.parent("div.dare");
 	}
+	
+    var pos = elem.position();
+
+    elem.css("position", "absolute").animate({
+	    left: -50,
+	    top:  pos.top,
+	});
+	setTimeout(function(){
+    elem.css("position", "").animate({
+	    left: 10,
+	    top:  pos.top,
+	});}, 200);
+    if(elem.hasClass("refused")){
+	    elem.removeClass("refused");
+    }
     if(elem.hasClass("accepted")){
 	    elem.removeClass("accepted");
     }

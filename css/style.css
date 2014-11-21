@@ -46,8 +46,7 @@ div.dare{
 	line-height: 40px;
 	padding: 10px;
 	float:left;
-	width:100%;
-	position:absolute;
+	width: 100%;
 }
 div.dare.accepted{background: rgb(118,229,103); /* Old browsers */
 background: -moz-linear-gradient(left,  rgba(118,229,103,1) 0%, rgba(255,255,255,1) 55%); /* FF3.6+ */
