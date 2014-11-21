@@ -25,7 +25,7 @@ function swipeleftHandler( event ){
     elem.css("position", "").animate({
 	    left: 10,
 	    top:  pos.top,
-	});}, 200);
+	});}, 300);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
     }
@@ -46,6 +46,7 @@ function swipeleftHandler( event ){
 }
     
 function swiperightHandler( event ){
+	var w = $(document);
     elem = $(event.target);
      if(!elem.hasClass("dare")){
 	    elem = elem.parent("div.dare");
@@ -54,14 +55,14 @@ function swiperightHandler( event ){
     var pos = elem.position();
 
     elem.css("position", "absolute").animate({
-	    left: -50,
+	    left: w.width()+50,
 	    top:  pos.top,
 	});
 	setTimeout(function(){
     elem.css("position", "").animate({
 	    left: 10,
 	    top:  pos.top,
-	});}, 200);
+	});}, 300);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
     }
