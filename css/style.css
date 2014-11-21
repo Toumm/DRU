@@ -49,18 +49,18 @@ div.dare{
 }
 div.dare div.who{
 	color: #59c963;
-	font-size: 20px;
+	font-size: 15px;
 	float:left;
 	cursor: pointer;
 }
 div.dare div.text{
 	color:#7f7f7f;
-	font-size:18px;
+	font-size:10px;
 	float:left;
 }
 div.dare div.thedare{
 	color: #ca5959;
-	font-size: 20px;
+	font-size: 15px;
 	float:left;
 	cursor: pointer;
 }
