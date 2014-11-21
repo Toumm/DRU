@@ -1,8 +1,7 @@
 function onLoad() {
     document.addEventListener("deviceready", onDeviceReady, false);
-    $(document).on("swiperight", ".dare", function() {
-        alert("test");
-    });
+    $( "div.box" ).on( "swipeleft", swipeleftHandler );
+
 }
 
 function onDeviceReady() {
