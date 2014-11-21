@@ -26,7 +26,7 @@ function swipeleftHandler( event ){
     elem.css("position", "").animate({
 	    left: 10,
 	    top:  pos.top,
-	});}, 300);
+	});}, 200);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
     }
@@ -62,7 +62,7 @@ function swiperightHandler( event ){
     elem.css("position", "").animate({
 	    left: 10,
 	    top:  pos.top,
-	});}, 300);
+	});}, 200);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
     }
