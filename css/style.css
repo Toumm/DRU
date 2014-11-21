@@ -41,7 +41,17 @@ h1, h2, h3, h4, h5, h6
 
 div.dare{
 	background-color:#fff;
-	border-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	line-height: 70px;
+	padding: 10px;
+	float:left;
+	width:100%;
+}
+div.deal{
+	background-color:#fff;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 	line-height: 70px;
 	padding: 10px;
 	float:left;
@@ -55,7 +65,7 @@ div.dare div.who{
 }
 div.dare div.text{
 	color:#7f7f7f;
-	font-size:10px;
+	font-size:15px;
 	float:left;
 }
 div.dare div.thedare{
@@ -63,6 +73,12 @@ div.dare div.thedare{
 	font-size: 15px;
 	float:left;
 	cursor: pointer;
+}
+.green{
+	color:#03b526;
+}
+.red{
+	color:#bd0707;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td, textarea, input { font-family: 'Open Sans'; font-weight: normal; }
