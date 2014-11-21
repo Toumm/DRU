@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
-		<meta name="author" content="www.frebsite.nl" />
+		<meta name="author" content="www.toum.be" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
 		<title>Dare you</title>
@@ -17,9 +17,11 @@
 		<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
 		<script type="text/javascript" src="js/jquery.flexslider.js"></script>
 		<script type="text/javascript" src="js/o-script.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 		
 	</head>
-	<body class="o-page">
+	<body class="o-page" onLoad="onLoad();">
 		<div id="page">
 			<!-- Header -->
 			<div id="header">
@@ -38,7 +40,7 @@
 				<div class="thedare">sleep with the turks</div>
 			</div>
 			<div class="deal">
-				<i class="fa fa-check green">&nbsp;Deal !</i>| <i class="fa fa-close red">&nbsp;No way!</i>
+				<div class="float">Do it or drink a beer upside-down.</div> <div class="float" id="dealcta" style="cursor:pointer;"><i class="fa fa-check green" style="margin-left:30px;">&nbsp;Deal !</i></div><div class="float">&nbsp;|&nbsp;</div> <div class="float" id="nowaycta" style="cursor:pointer;"><i class="fa fa-close red">&nbsp;No way!</i></div>
 			</div>
 			
 			<!-- Menu navigation -->
@@ -61,6 +63,8 @@
 					</li>
 				</ul>
 			</nav>
+		</div>
+		<div class="dealHover">
 		</div>
 	</body>
 </html>
