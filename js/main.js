@@ -11,7 +11,7 @@ function onDeviceReady() {
     
 function swipeleftHandler( event ){
     elem = $(event.target);
-     if(!elem.hasClass("dare")){
+    if(!elem.hasClass("dare")){
 	    elem = elem.parent("div.dare");
 	}
     if(elem.hasClass("refused")){
@@ -29,6 +29,7 @@ function swipeleftHandler( event ){
 	    hover.fadeIn();
 	    setTimeout(function(){ hover.fadeOut(); }, 2500);
 	    elem.addClass("accepted");
+	    alert(elem.attr("class"));
     }
 }
     
