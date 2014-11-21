@@ -96,6 +96,7 @@ function swiperightHandler( event ){
 //NOTIFICATION PLUGIN REGISTER
 function registering(){
 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
+		alert("registering1");
 	    pushNotification.register(
 	    successHandler,
 	    errorHandler,
@@ -104,6 +105,7 @@ function registering(){
 	        "ecb":"onNotification"
 	    });
 	} else if ( device.platform == 'blackberry10'){
+		alert("registering2");
 	    pushNotification.register(
 	    successHandler,
 	    errorHandler,
@@ -118,7 +120,6 @@ function registering(){
 	    });
 	} else {
 	
-		alert("registering...");
 	    pushNotification.register(
 	    tokenHandler,
 	    errorHandler,
