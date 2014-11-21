@@ -47,7 +47,6 @@ function swipeleftHandler( event ){
 }
     
 function swiperightHandler( event ){
-	var w = $(document);
     elem = $(event.target);
      if(!elem.hasClass("dare")){
 	    elem = elem.parent("div.dare");
@@ -56,7 +55,7 @@ function swiperightHandler( event ){
     var pos = elem.position();
 
     elem.css("position", "absolute").animate({
-	    left: w.width()+50,
+	    left: pos.left+50,
 	    top:  pos.top,
 	});
 	setTimeout(function(){
