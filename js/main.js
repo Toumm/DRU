@@ -6,6 +6,9 @@ function onLoad() {
 
 function onDeviceReady() {
     alert("device is ready!");
+}
+    
+function swipeleftHandler( event ){
     $("#dealcta").click(function(){
 	    var hover = $(".dealHover");
 	    var w = $(document);
@@ -18,6 +21,9 @@ function onDeviceReady() {
 	    hover.fadeIn();
 	    setTimeout(function(){ hover.fadeOut(); }, 2500);
     });
+}
+    
+function swiperightHandler( event ){
     $("#nowaycta").click(function(){
 	    var hover = $(".dealHover");
 	    var w = $(document);
@@ -31,7 +37,3 @@ function onDeviceReady() {
 	    setTimeout(function(){ hover.fadeOut(); }, 2500);
     });
 }
-    
-    function swipeleftHandler( event ){
-    	alert('swipe');
-	}
