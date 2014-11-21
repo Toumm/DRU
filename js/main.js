@@ -1,6 +1,6 @@
 function onLoad() {
     document.addEventListener("deviceready", onDeviceReady, false);
-    $( "div.box" ).on( "swipeleft", swipeleftHandler );
+    $( "div.dare" ).on( "swipeleft", swipeleftHandler );
 
 }
 
@@ -30,7 +30,8 @@ function onDeviceReady() {
 	    hover.fadeIn();
 	    setTimeout(function(){ hover.fadeOut(); }, 2500);
     });
+}
+    
     function swipeleftHandler( event ){
     	alert('swipe');
 	}
-}
