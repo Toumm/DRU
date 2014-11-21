@@ -1,0 +1,10 @@
+body{
+	background-color: black;
+	font-family: 'Cabin', sans-serif;
+}
+
+div.title{
+	color:white;
+	font-size: 25px;
+	text-align: center;
+}
