@@ -98,10 +98,8 @@ function swiperightHandler( event ){
 
 //NOTIFICATION PLUGIN REGISTER
 function registering(){
-	if(pushNotification == null)
-		alert("null!");
 	alert("registering...");
-	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
+	/*if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
 		alert("registering1");
 	    pushNotification.register(
 	    successHandler,
@@ -110,7 +108,7 @@ function registering(){
 	        "senderID":"replace_with_sender_id",
 	        "ecb":"onNotification"
 	    });
-	} else {
+	} else {*/
 		alert("registering2");
 	    pushNotification.register(
 	    tokenHandler,
@@ -121,7 +119,7 @@ function registering(){
 	        "alert":"true",
 	        "ecb":"onNotificationAPN"
 	    });
-	}
+	//}
 }
 
 //NOTIFICATION HANDLERS
