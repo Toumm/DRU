@@ -1,3 +1,5 @@
+var pushNotification;
+
 //ONLOAD REGISTER LISTENERS
 function onLoad() {
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -96,6 +98,8 @@ function swiperightHandler( event ){
 
 //NOTIFICATION PLUGIN REGISTER
 function registering(){
+	if(pushNotification == null)
+		alert("null!");
 	alert("registering...");
 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
 		alert("registering1");
