@@ -29,7 +29,6 @@ function swipeleftHandler( event ){
 	    hover.fadeIn();
 	    setTimeout(function(){ hover.fadeOut(); }, 2500);
 	    elem.addClass("accepted");
-	    alert(elem.attr("class"));
     }
 }
     
