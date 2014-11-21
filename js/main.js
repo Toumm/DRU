@@ -5,6 +5,7 @@ function onLoad() {
 	$( "body" ).on( "swiperight", function(){
 		$("#menu").trigger("open.mm");
 	});
+alert($(document).width());
 }
 
 function onDeviceReady() {
