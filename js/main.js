@@ -95,6 +95,7 @@ function swiperightHandler( event ){
 
 //NOTIFICATION PLUGIN REGISTER
 function registering(){
+alert("registering fired");
 	if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
 	    pushNotification.register(
 	    successHandler,
