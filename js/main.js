@@ -1,3 +1,4 @@
+//ONLOAD REGISTER LISTENERS
 function onLoad() {
     document.addEventListener("deviceready", onDeviceReady, false);
     $( "div.dare" ).on( "swipeleft", swipeleftHandler );
@@ -5,13 +6,16 @@ function onLoad() {
 	$( "body" ).on( "swiperight", function(){
 		$("#menu").trigger("open.mm");
 	});
-alert($(document).width());
 }
 
+
+//ON DEVICE READY
 function onDeviceReady() {
-    alert("device is ready!");
+    pushNotification = window.plugins.pushNotification;
 }
-    
+
+
+//DARE SWIPE LEFT HANDLER    
 function swipeleftHandler( event ){
     var elem = $(event.target);
     if(!elem.hasClass("dare")){
@@ -45,7 +49,9 @@ function swipeleftHandler( event ){
     }
     event.stopPropagation();
 }
-    
+
+
+//DARE SWIPE RIGHT SWIPE    
 function swiperightHandler( event ){
     elem = $(event.target);
      if(!elem.hasClass("dare")){
@@ -84,3 +90,56 @@ function swiperightHandler( event ){
     }
     event.stopPropagation();
 }
+
+
+//NOTIFICATION PLUGIN REGISTER
+if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
+    pushNotification.register(
+    successHandler,
+    errorHandler,
+    {
+        "senderID":"replace_with_sender_id",
+        "ecb":"onNotification"
+    });
+} else if ( device.platform == 'blackberry10'){
+    pushNotification.register(
+    successHandler,
+    errorHandler,
+    {
+        invokeTargetId : "replace_with_invoke_target_id",
+        appId: "replace_with_app_id",
+        ppgUrl:"replace_with_ppg_url", //remove for BES pushes
+        ecb: "pushNotificationHandler",
+        simChangeCallback: replace_with_simChange_callback,
+        pushTransportReadyCallback: replace_with_pushTransportReady_callback,
+        launchApplicationOnPush: true
+    });
+} else {
+    pushNotification.register(
+    tokenHandler,
+    errorHandler,
+    {
+        "badge":"true",
+        "sound":"true",
+        "alert":"true",
+        "ecb":"onNotificationAPN"
+    });
+}
+
+
+//NOTIFICATION HANDLERS
+function successHandler (result) {
+    alert('result = ' + result);
+}
+
+function errorHandler (error) {
+    alert('error = ' + error);
+}
+
+function tokenHandler (result) {
+    // Your iOS push server needs to know the token before it can push to this device
+    // here is where you might want to send it the token for later use.
+    alert('device token = ' + result);
+}
+
+//
