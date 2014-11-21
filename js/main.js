@@ -2,7 +2,9 @@ function onLoad() {
     document.addEventListener("deviceready", onDeviceReady, false);
     $( "div.dare" ).on( "swipeleft", swipeleftHandler );
     $( "div.dare" ).on( "swiperight", swiperightHandler );
-
+	$( "body" ).on( "swiperight", function(){
+		$("#menu").trigger("open.mm");
+	});
 }
 
 function onDeviceReady() {
@@ -30,6 +32,7 @@ function swipeleftHandler( event ){
 	    setTimeout(function(){ hover.fadeOut(); }, 2500);
 	    elem.addClass("accepted");
     }
+    event.stopPropagation();
 }
     
 function swiperightHandler( event ){
@@ -53,4 +56,5 @@ function swiperightHandler( event ){
 	    elem.addClass("refused");
 	    setTimeout(function(){ hover.fadeOut(); }, 2500);
     }
+    event.stopPropagation();
 }
