@@ -98,7 +98,6 @@ function swiperightHandler( event ){
 
 //NOTIFICATION PLUGIN REGISTER
 function registering(){
-alert(device);
 	alert("registering...");
 	if ( device.platform == 'android' || device.platform == 'Android' ){
 		alert("registering1");

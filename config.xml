@@ -60,6 +60,7 @@
 	-->
 	<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" />
 	<gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
+	<gap:plugin name="org.apache.cordova.device" version="0.2.12" />
 	
 	<preference name="StatusBarOverlaysWebView" value="false" />
 </widget>
