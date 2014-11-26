@@ -3,8 +3,6 @@ var pushNotification;
 //ONLOAD REGISTER LISTENERS
 function onLoad() {
     document.addEventListener("deviceready", onDeviceReady, false);
-    $( "div.dare" ).on( "swipeleft", swipeleftHandler );
-    $( "div.dare" ).on( "swiperight", swiperightHandler );
 	$( "body" ).on( "swiperight", function(){
 		$("#menu").trigger("open.mm");
 	});
@@ -14,10 +12,32 @@ function onLoad() {
 //ON DEVICE READY
 function onDeviceReady() {
 	alert("appReady");
-    pushNotification = window.plugins.pushNotification;
-    registering();
+    $("#content").load("dares.html", setSwipeHandlers());
+    //pushNotification = window.plugins.pushNotification;
+    //registering();
 }
 
+function goHome(){
+	$("#content").load("dares.html", setSwipeHandlers());
+}
+
+function setSwipeHandlers(){
+	setTimeout(function(){
+		$("#loader").fadeOut(function(){$("#content").fadeIn();});
+	    $( "div.dare" ).on( "swipeleft", swipeleftHandler );
+	    $( "div.dare" ).on( "swiperight", swiperightHandler );
+	    $( "div.dare" ).click(loadDetails );
+	}, 500);
+}
+
+//DARE CLICK HANDLER
+function loadDetails(){
+	$("#content").fadeOut("fast", function(){
+		$("#content").load("details.html", function(){
+			$("#content").show();
+		});
+	});
+}
 
 //DARE SWIPE LEFT HANDLER    
 function swipeleftHandler( event ){
@@ -48,7 +68,7 @@ function swipeleftHandler( event ){
 	    hover.css("left", (w.width()-h)/2);
 	    hover.html('<img src="img/Check.png" height="'+h*0.5+'px" width="'+h*0.5+'px" style="margin: 40px;" /><div class="green" style="font-size:'+h*0.2+'px;">DEAL!</div>');
 	    hover.fadeIn();
-	    setTimeout(function(){ hover.fadeOut(); }, 2500);
+	    setTimeout(function(){ hover.fadeOut(); }, 1800);
 	    elem.addClass("accepted");
     }
     event.stopPropagation();
@@ -90,7 +110,7 @@ function swiperightHandler( event ){
 	    hover.html('<img src="img/noway.png" height="'+h*0.4+'px" width="'+h*0.4+'px" style="margin: 40px;" /><div class="red" style="font-size:'+h*0.2+'px;">NO WAY!</div>');
 	    hover.fadeIn();
 	    elem.addClass("refused");
-	    setTimeout(function(){ hover.fadeOut(); }, 2500);
+	    setTimeout(function(){ hover.fadeOut(); }, 1800);
     }
     event.stopPropagation();
 }
