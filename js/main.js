@@ -37,9 +37,8 @@ function swipeleftHandler( event ){
 	});}, 200);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
-	    return;
     }
-    else{
+    else if(!elem.hasClass("accepted")){
 	    var hover = $(".dealHover");
 	    var w = $(document);
 	    hover.width(w.width()*0.8);
@@ -76,12 +75,11 @@ function swiperightHandler( event ){
 	});}, 200);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
-	    return;
     }
     if(elem.hasClass("accepted")){
 	    elem.removeClass("accepted");
     }
-    else{
+    else if(!elem.hasClass("refused")){
 	    var hover = $(".dealHover");
 	    var w = $(document);
 	    hover.width(w.width()*0.8);
