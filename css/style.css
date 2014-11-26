@@ -44,9 +44,12 @@ div.dare{
 	border-radius: 10px;
 	line-height: 40px;
 	padding: 10px;
+	margin-bottom: 5px;
+	position:relative;
 	float:left;
 	width: 100%;
 	box-shadow: 3px 3px 10px 0px gray;
+	border:2px solid rgba(0, 0, 0, 0);
 }
 div.dare.accepted{
 	border: 2px solid #42b43c;

@@ -26,15 +26,15 @@ function swipeleftHandler( event ){
 	    elem = elem.parent("div.dare");
 	}
     var pos = elem.position();
-    elem.css("position", "absolute").animate({
+    elem.css("position", "relative").animate({
 	    left: -50,
-	    top:  pos.top,
+	    top:  "auto",
 	});
 	setTimeout(function(){
-    elem.css("position", "").animate({
-	    left: 10,
-	    top:  pos.top,
-	});}, 200);
+    elem.css("position", "relative").animate({
+	    left: 0,
+	    top:  "auto",
+	});}, 150);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
     }
@@ -62,17 +62,17 @@ function swiperightHandler( event ){
 	    elem = elem.parent("div.dare");
 	}
 	
-    var pos = elem.position();
+    var pos = elem.offset();
 
-    elem.css("position", "absolute").animate({
+    elem.css("position", "relative").animate({
 	    left: pos.left+50,
-	    top:  pos.top,
+	    top:  "auto",
 	});
 	setTimeout(function(){
-    elem.css("position", "").animate({
-	    left: 10,
-	    top:  pos.top,
-	});}, 200);
+    elem.css("position", "relative").animate({
+	    left: 0,
+	    top:  "auto",
+	});}, 150);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
     }
