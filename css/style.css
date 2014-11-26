@@ -46,25 +46,13 @@ div.dare{
 	padding: 10px;
 	float:left;
 	width: 100%;
+	box-shadow: 3px 3px 10px 0px gray;
 }
-div.dare.accepted{background: rgb(118,229,103); /* Old browsers */
-background: -moz-linear-gradient(left,  rgba(118,229,103,1) 0%, rgba(255,255,255,1) 55%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(118,229,103,1)), color-stop(55%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(left,  rgba(118,229,103,1) 0%,rgba(255,255,255,1) 55%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(left,  rgba(118,229,103,1) 0%,rgba(255,255,255,1) 55%); /* Opera 11.10+ */
-background: -ms-linear-gradient(left,  rgba(118,229,103,1) 0%,rgba(255,255,255,1) 55%); /* IE10+ */
-background: linear-gradient(to right,  rgba(118,229,103,1) 0%,rgba(255,255,255,1) 55%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76e567', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
-
+div.dare.accepted{
+	border: 2px solid #42b43c;
 }
-div.dare.refused{background: rgb(255,96,96); /* Old browsers */
-background: -moz-linear-gradient(left,  rgba(255,96,96,1) 0%, rgba(255,255,255,1) 55%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,96,96,1)), color-stop(55%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(left,  rgba(255,96,96,1) 0%,rgba(255,255,255,1) 55%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(left,  rgba(255,96,96,1) 0%,rgba(255,255,255,1) 55%); /* Opera 11.10+ */
-background: -ms-linear-gradient(left,  rgba(255,96,96,1) 0%,rgba(255,255,255,1) 55%); /* IE10+ */
-background: linear-gradient(to right,  rgba(255,96,96,1) 0%,rgba(255,255,255,1) 55%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6060', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+div.dare.refused{
+	border: 2px solid #c71c1c;
 }
 div.deal{
 	border-top: 1px solid #aaaaaa;
@@ -74,21 +62,20 @@ div.deal{
 	width:100%;
 }
 div.dare div.who{
-	color: #59c963;
+	color: #000;
 	font-size: 15px;
 	float:left;
 	cursor: pointer;
 }
 div.dare div.text{
-	color:#7f7f7f;
+	color:#000;
 	font-size:15px;
 	float:left;
 }
 div.dare div.thedare{
-	color: #ca5959;
+	color: #gray;
 	font-size: 15px;
 	float:left;
-	clear:both;
 	cursor: pointer;
 }
 .green{
@@ -156,7 +143,7 @@ div.float{
 .header,
 #footer
 {
-	background: #587eac;
+	background: #9A3636;
 	font-size: 16px;
 	font-weight: bold;
 	color: #fff;
