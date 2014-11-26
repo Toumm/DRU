@@ -13,8 +13,8 @@ function onLoad() {
 function onDeviceReady() {
 	alert("appReady");
     $("#content").load("dares.html", setSwipeHandlers());
-    //pushNotification = window.plugins.pushNotification;
-    //registering();
+    pushNotification = window.plugins.pushNotification;
+    registering();
 }
 
 function goHome(){
