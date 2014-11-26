@@ -29,12 +29,12 @@ function swipeleftHandler( event ){
     elem.css("position", "relative").animate({
 	    left: -50,
 	    top:  "auto",
-	});
+	}, 200);
 	setTimeout(function(){
     elem.css("position", "relative").animate({
 	    left: 0,
 	    top:  "auto",
-	});}, 150);
+	}, 200);}, 150);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
     }
@@ -67,12 +67,12 @@ function swiperightHandler( event ){
     elem.css("position", "relative").animate({
 	    left: pos.left+50,
 	    top:  "auto",
-	});
+	}, 200);
 	setTimeout(function(){
     elem.css("position", "relative").animate({
 	    left: 0,
 	    top:  "auto",
-	});}, 150);
+	}, 200);}, 150);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
     }
