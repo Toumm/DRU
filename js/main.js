@@ -37,6 +37,7 @@ function swipeleftHandler( event ){
 	});}, 200);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
+	    return;
     }
     else{
 	    var hover = $(".dealHover");
@@ -75,6 +76,7 @@ function swiperightHandler( event ){
 	});}, 200);
     if(elem.hasClass("refused")){
 	    elem.removeClass("refused");
+	    return;
     }
     if(elem.hasClass("accepted")){
 	    elem.removeClass("accepted");
@@ -98,9 +100,7 @@ function swiperightHandler( event ){
 
 //NOTIFICATION PLUGIN REGISTER
 function registering(){
-	alert("registering...");
 	if ( device.platform == 'android' || device.platform == 'Android' ){
-		alert("registering1");
 	    pushNotification.register(
 	    successHandler,
 	    errorHandler,
@@ -109,7 +109,6 @@ function registering(){
 	        "ecb":"onNotification"
 	    });
 	} else {
-		alert("registering2");
 	    pushNotification.register(
 	    tokenHandler,
 	    errorHandler,
