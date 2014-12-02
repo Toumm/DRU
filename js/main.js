@@ -40,11 +40,7 @@ function loadDetails(){
 	$( "body" ).off( "swiperight" );
 	$( "body" ).on( "swiperight", function(event){
 		
-	    var elem = $(event.target);
-	    if(!elem.hasClass("mainDiv")){
-		    elem = elem.parent("div.mainDiv");
-		    console.log(elem);
-		}
+	    var elem = $("div.mainDiv");
 	    var pos = elem.position();
 	    elem.css("position", "relative").animate({
 		    right: -300,
