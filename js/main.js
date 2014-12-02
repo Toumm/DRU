@@ -38,8 +38,21 @@ function setSwipeHandlers(){
 //DARE CLICK HANDLER
 function loadDetails(){
 	$( "body" ).off( "swiperight" );
-	$( "body" ).on( "swiperight", function(){
-		goHome();
+	$( "body" ).on( "swiperight", function(event){
+		
+	    var elem = $(event.target);
+	    if(!elem.hasClass("mainDiv")){
+		    elem = elem.parent("div.mainDiv");
+		    console.log(elem);
+		}
+	    var pos = elem.position();
+	    elem.css("position", "relative").animate({
+		    right: -300,
+		    top:  "auto",
+		}, 200);
+		setTimeout(function(){
+	    	goHome();
+	    }, 150);
 	});
 	$("#content").fadeOut("fast", function(){
 		$("#content").load("details.html", function(){
