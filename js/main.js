@@ -11,6 +11,7 @@ function onLoad() {
 
 //ON DEVICE READY
 function onDeviceReady() {
+	$.ajaxSetup({ cache: false });
 	alert("appReady");
     $("#content").load("dares.html", setSwipeHandlers());
     pushNotification = window.plugins.pushNotification;
@@ -18,6 +19,10 @@ function onDeviceReady() {
 }
 
 function goHome(){
+	$( "body" ).off( "swiperight" );
+	$( "body" ).on( "swiperight", function(){
+		$("#menu").trigger("open.mm");
+	});
 	$("#content").load("dares.html", setSwipeHandlers());
 }
 
@@ -32,6 +37,10 @@ function setSwipeHandlers(){
 
 //DARE CLICK HANDLER
 function loadDetails(){
+	$( "body" ).off( "swiperight" );
+	$( "body" ).on( "swiperight", function(){
+		goHome();
+	});
 	$("#content").fadeOut("fast", function(){
 		$("#content").load("details.html", function(){
 			$("#content").show();

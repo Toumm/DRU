@@ -13,6 +13,9 @@
   font-weight: 700;
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
+.text-bold{
+	font-weight: 600;
+}
 
 html, body
 {
@@ -38,7 +41,52 @@ h1, h2, h3, h4, h5, h6
 	font-weight: bold;
 	margin: 20px 0 10px 0;
 }
-
+div.mainDiv{
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px 0px gray;
+	padding: 10px;
+}
+div.mainDiv input[type="submit"]{
+	margin-left:0px;
+	border:0;
+	line-height: 25px;
+	width: 15%;
+}
+div.commentDiv{
+	border-top: 1px solid gray;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+div.commentDiv div.comment{
+	padding:5px;
+	border-radius: 10px;
+	color: white;
+	background-color: rgba(188, 88, 91, 0.8);
+	margin-bottom: 15px;
+}
+div.commentDiv div.comment:after {
+  content:"";
+  position:absolute;
+  
+  left:40px; /* controls horizontal position */
+  border-width:10px 10px 0px 0px; /* vary these values to change the angle of the vertex */
+  border-style:solid;
+  border-color:rgba(188, 88, 91, 0.8) transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  margin-top: 5px;
+  width:0;
+}
+div.commentDiv img{
+	border: 1px solid #BC585B;
+}
+div.photoCentering{
+	text-align: center;
+}
+div.detailDiv div{
+	float:left;
+}
 div.dare{
 	background-color:#fff;
 	border-radius: 10px;
