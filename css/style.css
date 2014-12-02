@@ -47,6 +47,15 @@ div.mainDiv{
 	box-shadow: 3px 3px 10px 0px gray;
 	padding: 10px;
 }
+div.mainDiv input[type="text"]{
+	border-left: 1px solid gray;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	border-right: 0px solid gray;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	width: 70%;
+}
 div.mainDiv input[type="submit"]{
 	margin-left:0px;
 	border:0;
